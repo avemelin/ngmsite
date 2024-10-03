@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+{% block title %}Данные пользователей{% endblock %}
+
+{% block body %}
+<div>
+    {%if base %}
+        {% for el in base %}
+            <div class="text-center alert alert-success">
+                <h3>{{ el.name }}</h3>
+                <h3>{{ el.contact }}</h3>
+                <h3>{{ el.text }}</h3>
+            </div>
+        {% endfor %}
+    {% else %}
+        <h3>Database is empty</h3>
+    {% endif %}
+</div>
+
+{% endblock %}
+

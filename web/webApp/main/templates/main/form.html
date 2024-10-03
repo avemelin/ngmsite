@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Форма ввода записей{% endblock %}
+
+{% block body %}
+<div class="calc">
+    <form method="post">
+        {% csrf_token %}<br>
+        {{ form.name }}<br>
+        {{ form.contact }}<br>
+        {{ form.text}}<br>
+        <span>{{ error }}</span>
+         <button type="submit" class="btn">Отправить</button>
+    </form>
+
+</div>
+
+{% endblock %}
+
